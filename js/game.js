@@ -581,7 +581,7 @@ class Game extends Phaser.Scene {
     this.tweens.add({
       targets: bgIcon,
       angle: { from: -35, to: 0 },
-      duration: 1300,
+      duration: 1400,
       ease: "Sine.easeInOut",
       yoyo: true,
       repeat: -1,
@@ -1474,3 +1474,4 @@ const game = new Phaser.Game({
   },
   scene: [Game],
 });
+
