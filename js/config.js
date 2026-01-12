@@ -4,6 +4,8 @@ let sliceNumber;
 let spinDuration;
 let wheelPrizes;
 
+// let savedConfig = false;
+
 const savedConfig = localStorage.getItem("spinAndWinConfig");
 if (savedConfig) {
   const config = JSON.parse(savedConfig);
@@ -25,6 +27,7 @@ if (savedConfig) {
     { name: "20$", probability: 10, value: 20 },
   ];
 }
+
 let NiceTryColors = "golden"; //"dark" or "light" or "any" or single color like black. just type "black"
 const gitHubUrl = "assets/";
 
@@ -62,4 +65,3 @@ if (!link) {
   document.getElementsByTagName("head")[0].appendChild(link);
 }
 link.href = iconUrl;
-
