@@ -581,7 +581,7 @@ class Game extends Phaser.Scene {
     this.tweens.add({
       targets: bgIcon,
       angle: { from: -35, to: 0 },
-      duration: 1400,
+      duration: 1300,
       ease: "Sine.easeInOut",
       yoyo: true,
       repeat: -1,
@@ -819,7 +819,7 @@ class Game extends Phaser.Scene {
   }
 
   createWheel(scene, x, y, radius) {
-    this.segments = wheelPrizes;
+    this.segments = [...wheelPrizes];
 
     let totalProbability = wheelPrizes.reduce(
       (sum, prize) => sum + prize.probability,
@@ -859,6 +859,8 @@ class Game extends Phaser.Scene {
     const outerStroke = 2; // gap control
     const total = this.segments.length;
     const degPer = 360 / total;
+
+    console.log(total);
 
     // REAL GAP (pixel → angle)
     const gapAngle = outerStroke / radius;
@@ -1474,4 +1476,3 @@ const game = new Phaser.Game({
   },
   scene: [Game],
 });
-
